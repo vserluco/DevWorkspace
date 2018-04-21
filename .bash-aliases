@@ -1,0 +1,120 @@
+##################################################
+# ALIASES
+##################################################
+
+
+
+
+##################################################
+# App Specific
+##################################################
+
+# Jupyter
+alias notebook='jupyter notebook'
+# Oh My Zsh
+alias config_zsh='vim ~/.zshrc'
+alias reload_zsh='source ~/.zshrc'
+# Bash-Aliases
+alias config_alias='vim ~/.bash-aliases'
+alias reload_alias='source ~/.bash-aliases'
+# SSH
+alias teststand='ssh teststand@10.82.190.128'
+# Anaconda Environments
+alias act_py35='source activate python35'
+alias act_py27='source activate py27'
+alias deact='source deactivate'
+
+##################################################
+# control cd command hehavior
+##################################################
+
+# get rid of command not found ##
+alias cd..='cd ..'
+# a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+##################################################
+# miscellaneous
+##################################################
+
+# a quick clear
+alias cls='clear'
+# Your public IP address
+alias flush="sudo discoveryutil udnsflushcaches" # Flush DNS (Yosemite)
+alias ip='curl icanhazip.com'
+alias ll="ls -al" # List all files in current directory in long list format
+alias ldir="ls -al | grep ^d" # List all directories in current directory in long list format
+alias o="open ." # Open the current directory in Finder
+alias ut="uptime" # Computer uptime
+# search through command history
+alias hs='history | grep'
+# navigation
+alias 2valdocs='cd /Users/serlucov/Git/ValDocs/'
+alias 2structures='cd /Users/serlucov/Git/AdnStructuresEng/'
+# make a folder and go into it
+mkcd() { mkdir -p $1; cd $1 }
+# count number of files in a dir
+numfiles() { 
+	    N="$(ls $1 | wc -l)"; 
+		    echo "$N files in $1";
+}
+
+
+
+##################################################
+# control grep command output
+##################################################
+
+# Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+
+
+##################################################
+# Colorize the grep command output for ease of use (good for log files)##
+# start calculator with math support
+##################################################
+
+alias bc='bc -l'
+
+
+
+##################################################
+# set vim as default
+##################################################
+
+alias vi='vim'
+alias svi='sudo vi'
+alias vis='vim "+set si"'
+alias edit='vim'
+
+
+
+##################################################
+# add safety nets
+##################################################
+
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm='rm -I --preserve-root'
+# confirmation #
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias ln='ln -i'
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+
+
+##################################################
+#https://github.com/autowitch/dot_files 
+##################################################
